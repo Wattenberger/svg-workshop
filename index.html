@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Svg woo!</title>
+        <link rel="stylesheet" href="./../shared/style.css">
+        <style>
+            h2 {
+                margin-top: 2em;
+            }
+            .links {
+                display: flex;
+                margin: -1em;
+            }
+            .links-list {
+                margin: 2em 3em;
+            }
+            .links a {
+                display: block;
+                padding: 1em 2em;
+            }
+            .links ol {
+                padding: 0;
+            }
+            .links li {
+                padding: 0;
+                margin-left: 2em;
+            }
+            .links li a {
+                padding-left: 0;
+            }
+            .special {
+                background: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <div class="links">
+            <div class="links-list">
+                <h2>
+                    Exercises
+                </h2>
+                <ol>
+                    <li>
+                        <a href="/exercises/shapes.html">Basic shapes</a>
+                    </li>
+                    <li>
+                        <a href="/exercises/rainbow.html">Rainbow</a>
+                    </li>
+                    <li>
+                        <a href="/exercises/wavy_rect.html">Wavy rect</a>
+                    </li>
+                    <li>
+                        <a href="/exercises/squares.html">Squares</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="links-list">
+                <h2>
+                    Resources
+                </h2>
+                <a class="special" href="/resources/gallery.html">✨ Gallery ✨</a>
+                <a href="/resources/inspiration.html">Inspiration</a>
+                <a href="/resources/info.html">Resources</a>
+            </div>
+        </div>
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

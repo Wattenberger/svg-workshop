@@ -1,0 +1,61 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+svg * {
+    transition: all 0.3s ease-out;
+}
+body {
+    padding: 5em 6em;
+    background: #f1f2f6;
+    color: #2f3542;
+    font-size: 16px;
+}
+h2 {
+    font-weight: 900;
+}
+a {
+    color: #5352ed;
+    font-weight: 600;
+}
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2.5em;
+    max-height: 3.6em;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    transition: all 0.2s ease-out;
+    border: 1px solid;
+    color: white;
+    background: #5352ed;
+    border-radius: 3em;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    font-size: 0.875em;
+    font-weight: 600;
+    transition: background 0.2s ease-out;
+}
+button:hover,
+button:active,
+button:focus {
+    background: #2f3542;
+}
+.download-button {
+    display: block;
+    margin-top: 3em;
+}
+.home-link {
+    position: fixed;
+    top: 0;
+    padding: 1em 2em;
+    margin-top: 1em;
+}
+.nav a {
+    padding: 1em;
+}
+svg {
+    background: white;
+    border: 2px solid darkgrey;
+}

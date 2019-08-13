@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Svg woo!</title>
+        <link rel="stylesheet" href="./../shared/style.css">
+    </head>
+    <body>
+
+        <svg
+            width="300"
+            height="100"
+            viewBox="0 0 300 100"
+            id="svg">
+        </svg>
+
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="./../shared/scripts.js"></script>
+
+        <script>
+            const svg = d3.select("#svg")
+            const colorScale = d3.interpolateRainbow
+
+            const bands = [0,1,2,3,4,5,6,7,8]
+
+            svg.selectAll(".band")
+              .data(bands)
+              .join("circle")
+                .attr("cx", 150)
+                .attr("cy", 100)
+                .attr("fill", "none")
+                .attr("stroke-width", "10")
+                .attr("r", d => d * 10)
+                .attr("stroke", d => colorScale(1 - d / bands.length))
+
+        </script>
+    </body>
+</html>
