@@ -1,20 +1,3 @@
-(function() {
-    function svgToPng() {
-        saveSvgAsPng(d3.select("svg").node(), "myDrawing.png");
-    }
-
-    const button = document.createElement("button")
-    button.innerText = "Download SVG as image"
-    button.className = "download-button"
-    button.addEventListener("click", svgToPng)
-    document.body.append(button)
-
-    const nav = document.createElement("a")
-    nav.href = "/"
-    nav.innerText = "< Home"
-    nav.className = "home-link"
-    document.body.append(nav)
-})()
 
 // from https://github.com/exupero/saveSvgAsPng
 (function() {
@@ -229,3 +212,43 @@ if (typeof define !== 'undefined') {
 
 
 })();
+
+(function() {
+    function svgToPng() {
+        saveSvgAsPng(d3.select("svg").node(), "myDrawing.png");
+    }
+
+    const buttons = document.getElementById("buttons")
+
+    const button = document.createElement("button")
+    button.innerText = "Download SVG as image"
+    button.className = "download-button"
+    button.addEventListener("click", svgToPng)
+    buttons.append(button)
+
+    const nav = document.createElement("a")
+    nav.href = "/"
+    nav.innerText = "< Home"
+    nav.className = "home-link"
+    document.body.append(nav)
+
+    const link = document.createElement("a")
+    link.href = "./../resources/gallery.html"
+    link.setAttribute("target", "_blank")
+    link.setAttribute("rel", "noreferrer nolistener")
+    const linkButton = document.createElement("button")
+    linkButton.innerText = "Gallery"
+    linkButton.className = "download-button"
+    link.append(linkButton)
+    buttons.append(link)
+
+    const link2 = document.createElement("a")
+    link2.href = "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#colors_table"
+    link2.setAttribute("target", "_blank")
+    link2.setAttribute("rel", "noreferrer nolistener")
+    const linkButton2 = document.createElement("button")
+    linkButton2.innerText = "CSS colors reference"
+    linkButton2.className = "download-button"
+    link2.append(linkButton2)
+    buttons.append(link2)
+})()

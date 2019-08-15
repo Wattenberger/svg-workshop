@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Svg woo!</title>
+        <link rel="stylesheet" href="./../shared/style.css">
+    </head>
+    <body>
+
+        <svg
+            width="500"
+            height="300"
+            viewBox="0 0 500 300"
+            style="border: 3px solid teal;">
+            <defs>
+                <g id="train">
+
+                    <ellipse
+                        cx="150"
+                        cy="50"
+                        rx="30"
+                        ry="20"
+                        fill="lightgrey"
+                    />
+
+                    <ellipse
+                        cx="250"
+                        cy="50"
+                        rx="100"
+                        ry="50"
+                        fill="lightgrey"
+                    />
+
+                    <rect
+                        x="50"
+                        y="100"
+                        width="400"
+                        height="150"
+                        fill="currentColor"
+                    />
+                    <!-- smoke stack -->
+                    <rect
+                        x="325"
+                        y="50"
+                        width="50"
+                        height="50"
+                        fill="currentColor"
+                    />
+
+                    <!-- window -->
+                    <rect
+                        x="370"
+                        y="130"
+                        width="50"
+                        height="50"
+                        fill="#f1f2f6"
+                    />
+
+                    <!-- wheel -->
+                    <circle
+                        r="50"
+                        cx="150"
+                        cy="250"
+                        fill="salmon"
+                        stroke="#f1f2f6"
+                        stroke-width="15"
+                    />
+                    <!-- wheel -->
+                    <circle
+                        r="50"
+                        cx="350"
+                        cy="250"
+                        fill="salmon"
+                        stroke="#f1f2f6"
+                        stroke-width="15"
+                    />
+                </g>
+            </defs>
+
+            <use href="#train" transform="scale(0.4)" x="100" y="200" style="color: powderblue" /> <use href="#train" transform="scale(0.4)" x="600" y="200" style="color: teal" />
+            <use href="#train" transform="scale(0.2)" x="100" y="200" style="color: teal" />
+            <use href="#train" transform="scale(0.4)" x="600" y="200" style="color: yellowgreen" />
+
+        </svg>
+
+        <div id="buttons" class="buttons"></div>
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="./../shared/scripts.js"></script>
+
+    </body>
+</html>
