@@ -68,3 +68,44 @@ button:focus {
     background: white;
     border: 2px solid darkgrey;
 } */
+
+.options {
+    display: flex;
+    align-items: stretch;
+}
+
+.option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1em 2em;
+    padding: 0.6em 2em;
+    background: white;
+}
+.option:after {
+    content: "A";
+    position: absolute;
+    top: 1.2em;
+    left: -1em;
+    font-weight: 900;
+    background: teal;
+    color: white;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+.option:last-of-type:after {
+    content: "B";
+}
+.option:last-of-type:before {
+    content: "or";
+    margin-left: -4.5em;
+    font-weight: 900;
+    color: teal;
+}
+.option ol {
+    margin-left: 2em;
+}
